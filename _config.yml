@@ -1,7 +1,6 @@
 theme: jekyll-theme-tactile
-name: "Chris Fenner's Personal Blog Name"
-title: "Chris Fenner's Personal Blog Title"
-description: "Chris Fenner's Personal Blog Description"
+title: "Chris Fenner's Personal Blog"
+description: "worth the price of admission"
 permalink: "/:title"
 
 defaults:

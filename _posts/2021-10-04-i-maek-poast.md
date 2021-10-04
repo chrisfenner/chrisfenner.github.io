@@ -1,5 +1,6 @@
 ---
-title:  "I make poast"
+title:  "I maek poast"
+description: "in which poast is maed""
 ---
 
 # Poast
@@ -7,3 +8,5 @@ title:  "I make poast"
 **Hello**, this is a post.
 
 yay
+
+[Back to the main page]({{ page.url }})
