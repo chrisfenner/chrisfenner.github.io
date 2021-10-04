@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "I make poast"
-permalink: ""
 ---
 
 # Poast
