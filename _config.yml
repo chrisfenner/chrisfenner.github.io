@@ -1,1 +1,10 @@
 theme: jekyll-theme-tactile
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages posts collections"
+    values:
+      author: "Chris Fenner"
+      title: "Chris Fenner's Personal Blog"
