@@ -9,4 +9,4 @@ description: "in which poast is maed""
 
 yay
 
-[Back to the main page]({{ page.url }})
+[Back to the main page]({{ site.url }})
