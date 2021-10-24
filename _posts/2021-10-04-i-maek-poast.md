@@ -1,6 +1,7 @@
 ---
 title:  "I maek poast"
-description: "in which poast is maed""
+description: "in which poast is maed"
+permalink: /poast
 ---
 
 # Poast
