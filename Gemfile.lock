@@ -274,7 +274,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 219)
   jekyll-feed (~> 0.12)
-  jekyll-theme-time-machine (~> 0.2.0)
+  minima
   webrick (~> 1.7.0)
 
 BUNDLED WITH

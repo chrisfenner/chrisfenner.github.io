@@ -11,6 +11,6 @@ gem "github-pages", "~> 219", group: :jekyll_plugins
 group :jekyll_plugins do
   gem "webrick", "~> 1.7.0"
   gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-theme-time-machine", "~> 0.2.0"
+  gem "minima"
 end
 
