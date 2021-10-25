@@ -103,7 +103,8 @@ are trusted because the AK is trusted in (1)
 signed audit log digest trusted in (2) is the digest of the well-known
 `TPM2_GetCapability` command with the TPM returning the same PCR selection in
 response.
-4. The preimage PCR values are trusted because the quote is trusted in (2).
+4. The preimage PCR values are trusted because the quote is trusted in (2)
+and we know from (3) that the quote covers all active PCR banks.
 5. The boot log is trusted because when replayed it results in the preimage
 PCR values trusted in (4).
 
