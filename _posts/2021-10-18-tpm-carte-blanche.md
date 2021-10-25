@@ -73,7 +73,6 @@ Except I wasn't. This was my real TPM. For a sense of which of these rows of
 nonsense are supposed to not all be 0's or f's, see the SHA1 bank:
 
 ```
-~/src/go-tpm-tools$ sudo ./gotpm read pcr --hash-algo=sha1
 0: 3dcaea25dc86554d94b94aa5bc8f735a49212af8
 1: b2a83b0ebf2f8374299a5b2bdfc31ea955ad7236
 2: b2a83b0ebf2f8374299a5b2bdfc31ea955ad7236
