@@ -113,13 +113,13 @@ active PCR banks on the system**, helps defend against BIOS bugs where some of
 the PCR banks are left uncapped, by allowing the verifier to either mandate
 that every event in the boot log is measured into every PCR bank, or (more
 simply) that the device is configured correctly and only using a single PCR
-bank (i.e., SHA256). Because there's not actually a good reason to have
+bank (e.g., SHA256). Because there's not actually a good reason to have
 some of the software measuring into the SHA1 bank and other software
 measuring into the SHA256 bank.
 
 This still leaves open other types of BIOS bugs, for instance a bug where the
 SHA384 PCR bank is just never extended even if it is the only active bank.
-(BIOS writers: please just us `TPM2_PCR_Event` to make the TPM do all the
+(BIOS writers: please just use `TPM2_PCR_Event` to make the TPM do all the
 hashing and automagically populate every PCR.)
 
 For a more complete example of this type of PCR attestation, please see
