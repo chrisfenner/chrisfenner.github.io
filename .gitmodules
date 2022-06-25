@@ -1,0 +1,3 @@
+[submodule "rc"]
+	path = rc
+	url = git@github.com:chrisfenner/tpmrc.git
