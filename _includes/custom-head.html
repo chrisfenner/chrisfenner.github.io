@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Mathjax Support -->
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
+
+<!-- Mermaid Support -->
+<script type="text/javascript">
+  var config = {
+    startOnLoad: true,
+    theme: 'neutral',
+    flowchart: {
+      useMaxWidth: false,
+      htmlLabels: true
+    }
+  };
+  mermaid.initialize(config);
+  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>
+
 </html>
