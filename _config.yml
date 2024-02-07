@@ -27,6 +27,7 @@ url: "https://dlp.rip" # the base hostname & protocol for your site, e.g. http:/
 show_excerpts: true
 future: true
 usemathjax: true
+mermaid: true
 github_username: chrisfenner 
 excerpt_separator: <!--more-->
 
