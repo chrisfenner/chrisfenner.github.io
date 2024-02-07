@@ -6,17 +6,14 @@
   </script>
 
 <!-- Mermaid Support -->
-<script type="text/javascript">
-  var config = {
-    startOnLoad: true,
-    theme: 'neutral',
-    flowchart: {
-      useMaxWidth: false,
-      htmlLabels: true
-    }
-  };
-  mermaid.initialize(config);
-  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+<script type="text/javascript" src="https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js">
+</script>
+<script>
+  $(document).ready(function () {
+    mermaid.initialize({
+      theme: 'neutral'
+    });
+  });
 </script>
 
 </html>
