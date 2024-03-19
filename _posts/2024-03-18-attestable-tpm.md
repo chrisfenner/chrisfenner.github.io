@@ -1,6 +1,6 @@
 ---
-title:  "TPM 1.83 and Attestable TPM Firmware"
-permalink: /attestable-tpm
+title:  "Attesting to the TPM's Firmware in 1.83"
+permalink: /attesting-tpm-firmware
 ---
 
 ![a buggy and a fixed TPM](/images/2024-03-18-attestable-tpm.drawio.svg)
