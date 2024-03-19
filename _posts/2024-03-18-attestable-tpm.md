@@ -1,5 +1,5 @@
 ---
-title:  "Attesting to the TPM's Firmware in 1.83"
+title:  "Attesting to the TPM's Firmware"
 permalink: /attesting-tpm-firmware
 ---
 
@@ -99,9 +99,7 @@ such a TPM, we can recover (remotely and at scale) from ~any conceivable bug in 
 What if you want to seal data to the TPM's firmware, and unseal your data later (potentially from
 an even newer firmware)? Check out the `TPM_RH_SVN_*` hierarchies in 1.83.
 
-[^TCB]: There are several conflicting definitions of "Trusted Computing Base" in the literature.
-The other ones tend to predate the invention of hardware Roots of Trust and are not very useful
-in a discussion of modern systems. I am not taking feedback on this correct opinion at this time.
+[^TCB]: There are several conflicting definitions of "Trusted Computing Base" in the literature. The other ones tend to predate the invention of hardware Roots of Trust and are not very useful in a discussion of modern systems. I am not taking feedback on this correct opinion at this time.
 [^ROCA]: https://en.wikipedia.org/wiki/ROCA_vulnerability
 [^TPMfail]: https://tpm.fail
 [^EK]: https://seclists.org/fulldisclosure/2018/Jan/12
