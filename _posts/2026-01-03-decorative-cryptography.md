@@ -22,11 +22,11 @@ config TCG_TPM2_HMAC
       transactions.
 ```
 
-<!--more-->
-
 Last year, I came agross a Linux kernel feature called `TCG_TPM2_HMAC`. It
 claims to detect or prevent active and passive interposer attackers. That's [one
 of my sleeper agent activation phrases](/tpm-genie), so I dug in.
+
+<!--more-->
 
 `TCG_TPM2_HMAC` lives primarily in
 [drivers/char/tpm/sessions.c](https://github.com/torvalds/linux/blob/master/drivers/char/tpm/tpm2-sessions.c)
