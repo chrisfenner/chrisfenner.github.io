@@ -24,11 +24,6 @@ config TCG_TPM2_HMAC
 
 <!--more-->
 
-I've been in a lot of meetings where a Serious Security Professional ™️ said
-something like: "We have to do X instead of Y, because *it's More Secure*."
-Full disclosure: I've been this Security Professional at least once. We all
-reserve the right to get smarter over time!
-
 Last year, I came agross a Linux kernel feature called `TCG_TPM2_HMAC`. It
 claims to detect or prevent active and passive interposer attackers. That's [one
 of my sleeper agent activation phrases](/tpm-genie), so I dug in.
@@ -79,8 +74,8 @@ attacker of "modifying measurements" or "obtaining unsealed secrets".
 Let's take a second to distinguish the two types of attackers here:
 
 - **Passive Interposers** aka snoopers can only read from the bus but not modify
-  the data
-- **Active Interposers** can read and write to the bus
+  the data.
+- **Active Interposers** can read and write to the bus.
 
 The very best thing a **passive** interposer can do here is **Information**
 **Disclosure**: read data from the bus. Since measurements should typically not
@@ -184,9 +179,11 @@ What lessons can we learn from all this?
 
    ![Jayne](/images/2026-01-03-jayne.jpg)
 
-   *You know what the chain of trust is? It's the chain I go get and beat you*
-    *with 'til ya understand who's trustin' who here.* {: style="color:gray; font-size: 80%; text-align: center;"}
-3. **Security features that are not easily explainable are just marketing.**
+   <p style="text-align:center;"><em>
+   You know what the chain of trust is? It's the chain I go get and beat you
+    with 'til ya understand who's trustin' who here.
+    </em></p>
+3. **Unexplainable security features are just marketing materials.**
 
    Corollary: While attestation protocols can be quite byzantine, it should
    always boil down to 1 or more of "X checks Y against Z" and it should always
