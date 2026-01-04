@@ -50,7 +50,7 @@ adversaries tampering with firmware and boot loader measurements. Let's assume
 for now that the firmware and boot loader are just implicitly trusted to have
 booted "correct" code and successfully made honest measurements of all the boot
 stages up to and including the kernel. We also implicitly trust the TPM to
-behave correctly, here.
+behave correctly, here. [Or if you have a newer TPM, don't!](/attestable-tpm)
 
 Someone familiar with
 [the STRIDE model](https://en.wikipedia.org/wiki/STRIDE_model) can easily
