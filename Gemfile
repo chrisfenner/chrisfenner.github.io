@@ -6,11 +6,12 @@ source "https://rubygems.org"
 #     bundle exec jekyll serve
 #
 # This will help ensure the proper Jekyll version is running.
-gem "github-pages", "~> 219", group: :jekyll_plugins
+gem "github-pages", "~> 232", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "webrick", "~> 1.7.0"
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed", "~> 0.17.0"
   gem "minima"
+  gem "csv"
+  gem "bigdecimal"
 end
 
