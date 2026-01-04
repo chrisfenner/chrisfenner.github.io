@@ -162,7 +162,7 @@ kernel used when making its measurements.
 
 `TPM2_TCG_HMAC` was disabled by default again
 [in August 2025](https://lore.kernel.org/linux-integrity/20250825203223.629515-1-jarkko@kernel.org/)
-[starting with version 6.18](https://lore.kernel.org/all/aOibAOKu_lEsSlC8@kernel.org/)
+[starting with version 6.18](https://lore.kernel.org/all/aOibAOKu_lEsSlC8@kernel.org/).
 
 What lessons can we learn from all this?
 
