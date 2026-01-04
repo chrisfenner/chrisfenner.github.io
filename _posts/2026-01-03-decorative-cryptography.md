@@ -66,7 +66,7 @@ observe the following threats just on the big red wire in our picture above:
 | Escalation of Privilege    | Not obviously applicable in this case                          |
 
 The attacker may or may not necessarily get anything out of manipulating the TPM
-traffic itself (unless it is some kind of [degenerate](/) that
+traffic itself (unless they are some kind of [degenerate](/) that
 just likes to talk to TPMs for fun). But folks who are familiar with TPM-based
 measured boot and attestation should be able to immediately see the value to the
 attacker of "modifying measurements" or "obtaining unsealed secrets".
@@ -167,7 +167,7 @@ kernel used when making its measurements.
 What lessons can we learn from all this?
 
 1. **Applied cryptography cannot solve a security problem. It can only convert**
-   **security problem into a key-management problem.**
+   **a security problem into a key-management problem.**
 
    Corollary: If you aren't actually solving the key-management problem, your
    cryptography is strictly decorative. This is not only not helpful, it is
@@ -185,11 +185,11 @@ What lessons can we learn from all this?
     </em></p>
 3. **Unexplainable security features are just marketing materials.**
 
-   Corollary: While attestation protocols can be quite byzantine, it should
+   Corollary: While attestation protocols can be quite byzantine, they should
    always boil down to 1 or more of "X checks Y against Z" and it should always
    be possible to explain why X, Y, and Z are each trusted. The explanations
-   may lead to more tuples, this is fine, but don't give up if your questions
-   aren't being answered.
+   may lead to more X, Y, Z tuples, and this is fine, but don't give up if your
+   questions aren't being answered.
 
    Corollary 2: When someone comes along with detailed questions about something
    you're responsible for, don't take it personally. Instead, build trust by
