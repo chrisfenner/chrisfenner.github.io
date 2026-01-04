@@ -119,7 +119,7 @@ Every time a session is needed (e.g., every time the kernel needs to extend a
 PCR), the `TCG_TPM2_HMAC` feature key-encapsulates a new session key with
 something called the "Null Primary Key" which is a P256 ECDH key derived from
 the Null hierarchy (which means it changes on every boot). It uses this session
-key to protect TPM the command by encrypting the inputs and outputs and
+key to protect the TPM command by encrypting the inputs and outputs and
 adding an HMAC to detect tampering. Great.
 
 One problem: how does the kernel know what the Null Primary Key should be? Read
