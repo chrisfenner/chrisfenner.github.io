@@ -1,0 +1,45 @@
+title = "Chris Fenner's Personal Blog"
+url = "http://dlp.rip"
+tagline = "Almost worth the price of admission."
+
+[[articles]]
+path = "2021-10-18-tpm-carte-blanche.typ"
+title = "TPM Carte Blanche"
+tagline = "The true TCB of self-measured BIOS"
+permalink = "/tpm-carte-blanche"
+date = 2021-10-19
+
+[[articles]]
+path = "2021-10-25-tcb-attestation.typ"
+title = "TPM Carte Blanche-resistant Boot Attestation"
+tagline = "Some tips for verifiers"
+permalink = "/tcb-attestation"
+date = 2021-10-25
+
+[[articles]]
+path = "2023-10-01-brick.typ"
+title = "The Brick Test"
+tagline = "Defining success carefully"
+permalink = "/brick"
+date = 2023-10-01
+
+[[articles]]
+path = "2024-02-07-tpm-genie.typ"
+title = "TPM Genie"
+tagline = "BitLocker is Designed to Have This Problem"
+permalink = "/tpm-genie"
+date = 2024-02-07
+
+[[articles]]
+path = "2024-03-18-attestable-tpm.typ"
+title = "Attestable TPMs"
+tagline = "Attesting to the TPM's Firmware"
+permalink = "/attesting-tpm-firmware"
+date = 2024-03-18
+
+[[articles]]
+path = "2026-01-03-decorative-cryptography.typ"
+title = "Decorative Cryptography"
+tagline = "Some Thoughts on Decorative Cryptography"
+permalink = "/decorative-cryptography"
+date = 2026-01-03
