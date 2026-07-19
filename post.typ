@@ -16,14 +16,16 @@
     #emph[Opinions expressed here are my own and do not represent the official positions
       of any employer(s) of mine, past or present]
   ]
-  #div("footer-column")[
-    Chris Fenner's Personal Blog
-  ]
-  #div("footer-column")[
-    #link("https://github.com/chrisfenner")[github]
-  ]
-  #div("footer-column")[
-    #emph(tagline)
+  #div("footer-columns")[
+    #div("footer-column")[
+      Chris Fenner's Personal Blog
+    ]
+    #div("footer-column")[
+      #link("https://github.com/chrisfenner")[github]
+    ]
+    #div("footer-column")[
+      #emph(tagline)
+    ]
   ]
 ]
 
@@ -61,7 +63,7 @@
       }
       #html.elem("title", page-title)
       // Typst currently can't emit an empty style tag.
-      // #html.elem("style", attrs: (rel: "stylesheet", type: "text/css"), read("static/css/index.css"))
+      #html.elem("style", attrs: (rel: "stylesheet", type: "text/css"), read("stylesheet.css"))
     ]
     #html.body[
       #div("main")[
@@ -107,10 +109,6 @@
   post-date: none,
   blog-title: none,
   tagline: none,
-  syntax-theme: (
-    dark: none,
-    light: none,
-  ),
   body,
 ) = context [
   #set quote(block: true)
@@ -130,14 +128,8 @@
     ] #label
   ]
   #show raw.where(theme: auto, block: true): content => [
-    #div("code-dark", raw(
-      theme: "syntax/" + syntax-theme.dark + ".tmTheme",
-      lang: content.lang,
-      block: true,
-      content.text,
-    ))
-    #div("code-light", raw(
-      theme: "syntax/" + syntax-theme.light + ".tmTheme",
+    #div("code", raw(
+      theme: "syntax/.tmTheme",
       lang: content.lang,
       block: true,
       content.text,
