@@ -174,7 +174,8 @@
 
   #for article in articles [
     #html.elem("div", attrs: (class: "post-link"))[
-      #link(article.label, article.title)
+      #link(article.permalink, article.title)
+      #span("article-tagline", article.tagline)
       #date(article.date)
     ]
   ]

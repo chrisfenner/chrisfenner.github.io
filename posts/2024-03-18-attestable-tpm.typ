@@ -34,13 +34,7 @@ Elements of the TCB (i.e., the Roots of Trust) must be implicitly
 trusted because they are not measured (what else would measure them?)
 This is because of the definition of the Trusted Computing Base:
 
-#strong[Trusted Computing Base (TCB)]: #emph[The set of components of a
-  system that must be assumed to be trustworthy because there is no way to
-  check them. There are several conflicting definitions of
-  "Trusted Computing Base" in the literature. The other ones tend to
-  predate the invention of hardware Roots of Trust and are not very useful
-  in a discussion of modern systems. I am not taking feedback on this
-  correct opinion at this time.]
+#strong[Trusted Computing Base (TCB)]: #link(<foot:tcb>, "1")
 
 There's about 60K lines of code in the
 #link("https://github.com/trustedcomputinggroup/tpm")[TPM Reference Implementation].
@@ -53,11 +47,11 @@ contribute to the trustworthiness of a TPM, for example:
 - Vendor-specific functionality
 
 TPM vendors usually get it right, but occasionally, mistakes get made
-(#link("https://en.wikipedia.org/wiki/ROCA_vulnerability")
-#link("https://tpm.fail")
-#link("https://seclists.org/fulldisclosure/2018/Jan/12").
+(#link(<foot:roca>, "2")
+#link(<foot:tpmfail>, "3")
+#link(<foot:ek>, "4").
 When a bug is identified inside the TCB, it should be fixed
-#link("https://datatracker.ietf.org/doc/html/rfc9225")). Since
+#link(<foot:9225>, "5")). Since
 the TCB has to be assumed to be trustworthy, you have to ask it nicely
 to update itself and hope it's not trying to trick you. When your TCB is
 a Root of Trust inside a lot of remote machines (e.g., a datacenter),
@@ -121,7 +115,7 @@ gives us the following nice properties:
 
 - Each firmware version on a given TPM gets a fresh #emph[FW Secret]
   that no other firmware on that TPM (or any other TPM) has
-- Each firmware's #emph[FM Secret] is stable if the firmware is not
+- Each firmware's #emph[FW Secret] is stable if the firmware is not
   changed
 
 This shrinks the TPM's TCB to effectively just the TPM's boot loader and
@@ -138,10 +132,10 @@ data later (potentially from an even newer firmware)? Check out the
 
 1: There are several conflicting definitions of "Trusted Computing Base" in the literature. The other ones tend to predate the invention of hardware Roots of Trust and are not very useful in a discussion of modern systems. I am not taking feedback on this correct opinion at this time. <foot:tcb>
 
-2: #link("https://en.wikipedia.org/wiki/ROCA_vulnerability> <foot:roca")
+2: #link("https://en.wikipedia.org/wiki/ROCA_vulnerability") <foot:roca>
 
-3: #link("https://tpm.fail> <foot:tpmfail")
+3: #link("https://tpm.fail") <foot:tpmfail>
 
-4: #link("https://seclists.org/fulldisclosure/2018/Jan/12> <foot:ek")
+4: #link("https://seclists.org/fulldisclosure/2018/Jan/12") <foot:ek>
 
-5: #link("https://datatracker.ietf.org/doc/html/rfc9225> foot<9225")
+5: #link("https://datatracker.ietf.org/doc/html/rfc9225") <foot:9225>

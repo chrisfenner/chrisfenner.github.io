@@ -10,7 +10,7 @@
 #import "post.typ": index
 
 #for article in articles [
-  #document(article.basename + "/index.html", article.content) #article.label
+  #document(article.permalink, article.content, format: "html") #label(article.permalink)
 ]
 
 #document("index.html", title: blog-title, index(

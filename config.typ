@@ -14,8 +14,7 @@
   }
 
   let article_path = "posts/" + article.path
-  let basename = article.path.replace(regex("\.\w+$"), "")
-  let article_label = label(basename)
+  let article_permalink = article.permalink
   let article_tagline = article.at("tagline", default: "")
 
   let show-post = post.with(
@@ -33,10 +32,10 @@
   }
 
   unsorted-articles.push((
-    basename: basename,
+    permalink: article_permalink,
     title: article.title,
+    tagline: article.tagline,
     date: article.date,
-    label: article_label,
     content: article_content,
   ))
 }
