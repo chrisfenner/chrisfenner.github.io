@@ -107,7 +107,7 @@
   #set quote(block: true)
 
   // Self-linkify all headings.
-  #show heading.where(level: 1): heading => [
+  #show heading: heading => [
     // Fetch the id of the heading in case one was provided (or generated?).
     #let label = heading.at("label", default: none)
     #if label != none {

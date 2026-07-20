@@ -43,3 +43,10 @@ title = "Decorative Cryptography"
 tagline = "Some Thoughts on Decorative Cryptography"
 permalink = "/decorative-cryptography"
 date = 2026-01-03
+
+[[posts]]
+path = "2026-07-20-everyday-cryptography.typ"
+title = "The Design of Everyday Cryptography"
+tagline = "Cryptography Should Be Hard to Use Improperly"
+permalink = "/everyday-cryptography"
+date = 2026-07-20
