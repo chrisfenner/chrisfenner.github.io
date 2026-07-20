@@ -1,0 +1,42 @@
+name: deploy to GitHub pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          pip3 install feedgen &&
+          apt update &&
+          apt install typst
+      - name: Generate RSS XML
+        run: |
+          python3 generate-feed.py
+      - name: Use typst to build bundle
+        id: build
+        run: |
+          typst compile bundle.typ --format bundle --features html,bundle
+      - name: Copy non-blog projects into bundle
+        id: copy
+        run: |
+          cp -r rc bundle/
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: bundle/
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
