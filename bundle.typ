@@ -10,7 +10,9 @@
 #import "post.typ": index
 
 #for post in posts [
-  #document(post.permalink, post.content, format: "html") #label(post.permalink)
+  // Hosting the document at just `post.permalink` results in the browser
+  // offering to download the page instead of just display it.
+  #document(post.permalink + "/index.html", post.content, format: "html") #label(post.permalink)
 ]
 
 #document("index.html", title: blog-title, index(
