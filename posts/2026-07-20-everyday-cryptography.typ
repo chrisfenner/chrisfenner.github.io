@@ -102,7 +102,7 @@ def dsa_verify_prehash(pub: PublicKey, ctx: bytes, hash_alg: HashAlgorithm, hash
   return ok
 ```
 
-I almost forgot about the "External Mu" trick (e.g., #link("https://csrc.nist.gov/pubs/fips/204/final")[FIPS 204], Algorithm 7, Line 6) which is equivalent to pure signing, but allows computing the fixed-length message representative hash (which includes ctxbefore passing it to the signer, which helps with the problem below. Let's add it...
+I almost forgot about the "External Mu" trick (e.g., #link("https://csrc.nist.gov/pubs/fips/204/final")[FIPS 204], Algorithm 7, Line 6) which is equivalent to pure signing, but allows computing the fixed-length message representative hash (which includes ctx) before passing it to the signer, which helps with the problem below. Let's add it...
 
 ```python
 def dsa_sign_pure_mu(priv: PrivateKey, mu: bytes) -> Signature:
