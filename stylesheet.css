@@ -19,7 +19,7 @@
 /* Content */
 
 .main {
-  max-width: 650pt;
+  width: clamp(270pt, 90%, 650pt);
   margin: 1rem;
 }
 
