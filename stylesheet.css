@@ -19,8 +19,7 @@
 /* Content */
 
 .main {
-  width: clamp(270pt, 90%, 650pt);
-  margin: 1rem;
+  width: clamp(270pt, 100%, 650pt);
 }
 
 body {
@@ -52,6 +51,13 @@ body::after {
     var(--code-background-color),
     var(--background-color)
   );
+}
+
+@media screen and (max-width: 649pt) {
+  body::before,
+  body::after {
+    display: none;
+  }
 }
 
 header,
