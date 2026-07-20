@@ -34,7 +34,7 @@ Elements of the TCB (i.e., the Roots of Trust) must be implicitly
 trusted because they are not measured (what else would measure them?)
 This is because of the definition of the Trusted Computing Base:
 
-#strong[Trusted Computing Base (TCB)]: #link(<foot:tcb>, "1")
+#strong[Trusted Computing Base (TCB)]: #emph[The set of components of a system that must be assumed to be trustworthy because there is no way to check them.] #link(<foot:tcb>, "1")
 
 There's about 60K lines of code in the
 #link("https://github.com/trustedcomputinggroup/tpm")[TPM Reference Implementation].

@@ -1,49 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   --background-color: #0e3026;
-  --code-background-color: #06120f;
+  --code-background-color: #0b221b;
   --foreground-color: #c2e4d8;
   --link-color: #00f8ae;
   --link-hover-color: #14bc8a;
 }
 
-body {
-  font:
-    300 16px/1.5 -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  color: #111;
-  background-color: var(--background-color);
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
+/* Index */
 
-body {
-  background-color: #0e3026;
-}
-
-img {
-  margin: auto;
+.post-link {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--code-background-color);
 }
 
 /* Content */
 
 .main {
+  width: 650pt;
+  margin: auto;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: 250;
+  color: #111;
+  background-color: var(--background-color);
   color: var(--foreground-color);
-  max-width: 650pt;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+.title,
+.footer-columns,
+code,
+.code {
+  font-family: "Overpass Mono", monospace;
+}
+
+img {
   margin: auto;
 }
 
@@ -55,11 +59,29 @@ a:hover {
   color: var(--link-hover-color);
 }
 
+/* Code-specific content */
+
 .code {
   background-color: var(--code-background-color);
   padding-inline: 1em;
   border-radius: 0.5em;
   overflow: auto;
+  font-variant-ligatures: none;
+}
+
+code {
+  background-color: var(--code-background-color);
+  padding: 0.1rem;
+  font-size: 0.9rem;
+  border-radius: 0.5em;
+  font-variant-ligatures: none;
+}
+
+/* Rules */
+
+hr {
+  border: none;
+  border-top: 0.5pt solid var(--foreground-color);
 }
 
 /* Footer */
@@ -75,7 +97,7 @@ a:hover {
 
 .footer-columns {
   font-weight: 100;
-  padding-top: 2rem;
+  padding-top: 1rem;
   font-size: 0.75rem;
   display: grid;
   grid-template-columns: 40% 20% 40%;
