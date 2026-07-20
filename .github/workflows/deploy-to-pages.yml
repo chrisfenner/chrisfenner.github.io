@@ -17,7 +17,9 @@ jobs:
           pip3 install feedgen &&
           sudo snap install typst
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
       - name: Generate RSS XML
         run: |
           python3 generate-feed.py
