@@ -1,43 +1,42 @@
 #import "post.typ": post
-#import "@preview/cmarker:0.1.8": render
 
 #let config = toml("config.toml")
 
 #let blog-title = config.title
 #let tagline = config.at("tagline", default: "")
 
-#let unsorted-articles = ()
+#let unsorted-posts = ()
 
-#for article in config.at("articles") {
-  if (article.at("draft", default: false)) {
+#for this_post in config.at("posts") {
+  if (this_post.at("draft", default: false)) {
     continue
   }
 
-  let article_path = "posts/" + article.path
-  let article_permalink = article.permalink
-  let article_tagline = article.at("tagline", default: "")
+  let post_path = "posts/" + this_post.path
+  let post_permalink = this_post.permalink
+  let post_tagline = this_post.at("tagline", default: "")
 
   let show-post = post.with(
-    post-title: article.at("title", default: none),
-    post-date: article.at("date", default: none),
+    post-title: this_post.at("title", default: none),
+    post-date: this_post.at("date", default: none),
     blog-title: blog-title,
     tagline: tagline,
   )
 
-  let article_content = {
+  let post_content = {
     [
       #show: show-post
-      #include article_path
+      #include post_path
     ]
   }
 
-  unsorted-articles.push((
-    permalink: article_permalink,
-    title: article.title,
-    tagline: article.tagline,
-    date: article.date,
-    content: article_content,
+  unsorted-posts.push((
+    permalink: post_permalink,
+    title: this_post.title,
+    tagline: this_post.tagline,
+    date: this_post.date,
+    content: post_content,
   ))
 }
 
-#let articles = unsorted-articles.sorted(key: article => article.date, by: (a, b) => a >= b)
+#let posts = unsorted-posts.sorted(key: post => post.date, by: (a, b) => a >= b)
