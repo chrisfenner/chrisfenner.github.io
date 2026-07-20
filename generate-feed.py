@@ -16,6 +16,8 @@ fg.description(config["tagline"])
 fg.language("en")
 
 for post in config["posts"]:
+    if "draft" in post:
+        continue
     fe = fg.add_entry()
     fe.title(post["title"])
     fe.link(href=config["url"] + post["permalink"])

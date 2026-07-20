@@ -108,14 +108,14 @@
 
   // Self-linkify all headings.
   #show heading.where(level: 1): heading => [
-    // Fetch the id of the heading that Typst made automatically.
+    // Fetch the id of the heading in case one was provided (or generated?).
     #let label = heading.at("label", default: none)
     #if label != none {
       html.elem("h" + str(heading.level + 1))[
         #link(label, heading.body)
       ]
     } else {
-      html.elem("h" + str(heading.level + 1))[heading.body]
+      html.elem("h" + str(heading.level + 1), heading.body)
     }
   ]
   #show raw.where(theme: auto, block: true): content => [

@@ -11,8 +11,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip3 install feedgen &&
-          apt update &&
-          apt install typst
+          sudo apt update &&
+          sudo apt install typst
       - name: Generate RSS XML
         run: |
           python3 generate-feed.py

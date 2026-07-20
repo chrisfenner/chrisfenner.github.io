@@ -7,8 +7,10 @@
 
 #let unsorted-posts = ()
 
+#let doc-version = sys.inputs.at("version", default: "Final")
+
 #for this_post in config.at("posts") {
-  if (this_post.at("draft", default: false)) {
+  if (this_post.at("draft", default: false) and doc-version != "Draft") {
     continue
   }
 
