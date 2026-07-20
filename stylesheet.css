@@ -19,8 +19,8 @@
 /* Content */
 
 .main {
-  width: 650pt;
-  margin: auto;
+  max-width: 650pt;
+  margin: 1rem;
 }
 
 body {
@@ -30,8 +30,28 @@ body {
   background-color: var(--background-color);
   color: var(--foreground-color);
   display: flex;
+  flex-direction: row;
   min-height: 100vh;
-  flex-direction: column;
+}
+
+body::before {
+  content: "\00a0";
+  flex-grow: 1;
+  background-image: linear-gradient(
+    to right,
+    var(--code-background-color),
+    var(--background-color)
+  );
+}
+
+body::after {
+  content: "\00a0";
+  flex-grow: 1;
+  background-image: linear-gradient(
+    to left,
+    var(--code-background-color),
+    var(--background-color)
+  );
 }
 
 header,
@@ -51,12 +71,20 @@ img {
   margin: auto;
 }
 
+/* Links */
+
 a {
   color: var(--link-color);
 }
 
 a:hover {
   color: var(--link-hover-color);
+}
+
+h2 a,
+h3 a {
+  color: var(--foreground-color);
+  text-decoration: none;
 }
 
 /* Code-specific content */

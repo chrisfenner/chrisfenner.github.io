@@ -114,10 +114,6 @@
   }
 }
 
-#let _slugify(text) = {
-  lower(_plain-text(text).replace(regex("\W+"), "-").replace(regex("(^-+|-+$)"), ""))
-}
-
 #let post(
   post-title: none,
   post-date: none,
@@ -126,20 +122,18 @@
   body,
 ) = context [
   #set quote(block: true)
+
+  // Self-linkify all headings.
   #show heading.where(level: 1): heading => [
-    #let label = label(_slugify(post-title + "-" + heading.body))
-    #html.elem("h2")[
-      #span("section-title", heading.body)
-      #span("section-link-postfix")[#link(label)[§]]
-    ] #label
-  ]
-  #show heading.where(level: 2): heading => [
-    #let label = label(_slugify(post-title + "-" + heading.body))
-    #html.elem("h3")[
-      #span("section-link")[#link(label)[#html.elem("span")[§]]]
-      #span("section-title", heading.body)
-      #span("section-link-postfix")[#link(label)[§]]
-    ] #label
+    // Fetch the id of the heading that Typst made automatically.
+    #let label = heading.at("label", default: none)
+    #if label != none {
+      html.elem("h" + str(heading.level + 1))[
+        #link(label, heading.body)
+      ]
+    } else {
+      html.elem("h" + str(heading.level + 1))[heading.body]
+    }
   ]
   #show raw.where(theme: auto, block: true): content => [
     #div("code", raw(
