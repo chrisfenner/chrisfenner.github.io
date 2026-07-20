@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --background-color: #0e3026;
+  --code-background-color: #0b221b;
+  --foreground-color: #c2e4d8;
+  --link-color: #00f8ae;
+  --link-hover-color: #14bc8a;
+}
+
+/* Index */
+
+.post-link {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--code-background-color);
+}
+
+/* Content */
+
+.main {
+  max-width: 650pt;
+  margin: 1rem;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: 250;
+  color: #111;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "\00a0";
+  flex-grow: 1;
+  background-image: linear-gradient(
+    to right,
+    var(--code-background-color),
+    var(--background-color)
+  );
+}
+
+body::after {
+  content: "\00a0";
+  flex-grow: 1;
+  background-image: linear-gradient(
+    to left,
+    var(--code-background-color),
+    var(--background-color)
+  );
+}
+
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+.title,
+.footer-columns,
+code,
+.code {
+  font-family: "Overpass Mono", monospace;
+}
+
+img {
+  margin: auto;
+}
+
+/* Links */
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+h2 a,
+h3 a {
+  color: var(--foreground-color);
+  text-decoration: none;
+}
+
+/* Code-specific content */
+
+.code {
+  background-color: var(--code-background-color);
+  padding-inline: 1em;
+  border-radius: 0.5em;
+  overflow: auto;
+  font-variant-ligatures: none;
+}
+
+code {
+  background-color: var(--code-background-color);
+  padding: 0.1rem;
+  font-size: 0.9rem;
+  border-radius: 0.5em;
+  font-variant-ligatures: none;
+}
+
+/* Rules */
+
+hr {
+  border: none;
+  border-top: 0.5pt solid var(--foreground-color);
+}
+
+/* Footer */
+
+.footer-obligatory {
+  font-weight: 150;
+  font-size: 0.85rem;
+  margin: auto;
+  display: grid;
+  place-items: top center;
+  text-align: center;
+}
+
+.footer-columns {
+  font-weight: 100;
+  padding-top: 1rem;
+  font-size: 0.75rem;
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+}
+
+.footer-columns > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer-columns * {
+  max-height: 2lh;
+  fill: var(--foreground-color);
+}
+
+.footer-column1 {
+  text-align: left;
+}
+
+.footer-column2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-column2 svg {
+  height: 2lh;
+  width: auto;
+}
+
+.footer-column3 {
+  text-align: right;
+}
