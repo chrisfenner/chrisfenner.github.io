@@ -113,6 +113,14 @@ code {
   font-variant-ligatures: none;
 }
 
+/* Math-specific content */
+.math {
+  background-color: var(--code-background-color);
+  padding: 1rem;
+  border-radius: 0.5em;
+  overflow: auto;
+  max-width: 100%;
+}
 /* Rules */
 
 hr {

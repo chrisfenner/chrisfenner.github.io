@@ -118,6 +118,7 @@
       html.elem("h" + str(heading.level + 1), heading.body)
     }
   ]
+  // Wrap code blocks.
   #show raw.where(theme: auto, block: true): content => [
     #div("code", raw(
       theme: "syntax/.tmTheme",
@@ -125,6 +126,10 @@
       block: true,
       content.text,
     ))
+  ]
+  // Wrap math blocks in a nice div so we can style it and make it scrollable.
+  #show math.equation.where(block: true): content => [
+    #div("math", content)
   ]
   #show: _main.with(
     page-title: post-title + " - " + blog-title,
