@@ -127,6 +127,10 @@
       content.text,
     ))
   ]
+  // Support non-default languages.
+  #show raw.where(lang: "kconfig"): set raw(
+    syntaxes: "syntax/kconfig.sublime-syntax",
+  )
   // Wrap math blocks in a nice div so we can style it and make it scrollable.
   #show math.equation.where(block: true): content => [
     #div("math", content)
