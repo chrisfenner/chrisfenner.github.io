@@ -79,6 +79,24 @@ img {
   height: auto;
 }
 
+table {
+  border-collapse: collapse; /* Merges double borders into single lines */
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--foreground-color); /* Sets thickness, style, and color */
+  padding: 8px; /* Gives cells room to breathe */
+}
+
+th {
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
 /* Links */
 
 a {

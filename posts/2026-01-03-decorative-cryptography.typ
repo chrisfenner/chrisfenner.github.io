@@ -53,28 +53,27 @@ Someone familiar with
 can easily observe the following threats just on the big red wire in our
 picture above:
 
-#figure(
-  align(center)[#table(
-    columns: (29.55%, 70.45%),
-    align: (auto, auto),
-    table.header([Attack], [Example]),
-    table.hline(),
-    [#strong[Spoofing]],
-    [Attacker pretends to be the TPM or the CPU to
-      the other device],
-    [#strong[Tampering]],
-    [Attacker drops or modifies measurements sent
-      to the TPM],
-    [Repudiation], [Not obviously applicable in this case],
-    [#strong[Information Disclosure]],
-    [Attacker obtains unsealed
-      secrets (e.g., disk encryption keys)],
-    [#strong[Denial of Service]],
-    [Attacker drops measurements sent to
-      the TPM],
-    [Escalation of Privilege], [Not obviously applicable in this case],
-  )],
-  kind: table,
+#table(
+  columns: (auto, 1fr),
+  table.header[Attack][Example],
+  [*Spoofing*],
+  [Attacker pretends to be the TPM or the CPU to
+    the other device],
+
+  [*Tampering*],
+  [Attacker drops or modifies measurements sent
+    to the TPM],
+
+  [*Repudiation*], [Not obviously applicable in this case],
+  [*Information Disclosure*],
+  [Attacker obtains unsealed
+    secrets (e.g., disk encryption keys)],
+
+  [*Denial of Service*],
+  [Attacker drops measurements sent to
+    the TPM],
+
+  [*Escalation of Privilege*], [Not obviously applicable in this case],
 )
 
 The attacker may or may not necessarily get anything out of manipulating

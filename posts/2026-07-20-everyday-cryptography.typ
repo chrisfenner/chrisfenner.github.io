@@ -67,7 +67,7 @@ The big snake pit you have to jump over when trying to use a modern digital sign
 
 For even more wisdom: see Sophie's excellent write-up #link("https://keymaterial.net/2024/11/05/hashml-dsa-considered-harmful/")["HashML-DSA considered harmful"].
 
-The prehashing question becomes additional variety (in the #link("https://en.wikipedia.org/wiki/Variety_(cybernetics)")[cybernetics sense]) that must be handled be additional variety at the interface level.
+The prehashing question becomes additional variety (in the #link("https://en.wikipedia.org/wiki/Variety_(cybernetics)")[cybernetics sense]) that must be handled by additional variety at the interface level.
 
 We can create `pure` and `prehash` variants of the `sign` and `verify` functions.
 
