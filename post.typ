@@ -1,5 +1,6 @@
 #let div(class, body) = html.elem("div", attrs: (class: class), body)
 #let span(class, body) = html.elem("span", attrs: (class: class), body)
+#let fancy(body) = html.elem("span", attrs: (class: "fancy"), body)
 
 #let header(blog-title: "My Blog") = [
   #html.elem("header")[

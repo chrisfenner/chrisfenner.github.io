@@ -50,3 +50,10 @@ title = "The Design of Everyday Cryptography"
 tagline = "Cryptography Should Be Hard to Use Improperly"
 permalink = "/everyday-cryptography"
 date = 2026-07-20
+
+[[posts]]
+path = "2026-07-26-slop-proxy.typ"
+title = "Don't Be a Slop Proxy"
+tagline = "Do I Look Like Someone Who Doesn't Know How to Generate My Own Slop?"
+permalink = "/slop-proxy"
+date = 2026-07-26
