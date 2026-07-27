@@ -35,3 +35,8 @@
   "og-image.png",
   read("og-image.png", encoding: none),
 )
+
+#asset(
+  "favicon.png",
+  read("favicon.png", encoding: none),
+)
