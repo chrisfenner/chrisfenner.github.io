@@ -22,7 +22,7 @@
     post-title: this_post.at("title", default: none),
     post-date: this_post.at("date", default: none),
     blog-title: blog-title,
-    tagline: tagline,
+    tagline: post_tagline,
   )
 
   let post_content = {

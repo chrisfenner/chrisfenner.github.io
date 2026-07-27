@@ -49,14 +49,20 @@
   html.elem("aside", datetime.display(date-format))
 }
 
-#let _html_meta(page-title, image: "floppies.png") = (
-  (charset: "utf-8"),
-  (name: "viewport", content: "width=device-width, initial-scale=1"),
-  (name: "og:title", content: page-title),
-  (itemprop: "name", content: page-title),
-  (name: "image", content: image),
-  (name: "og:image", content: image),
-)
+#let _html_meta(title, description, og-type: none) = {
+  let base-attrs = (
+    (charset: "utf-8"),
+    (name: "viewport", content: "width=device-width, initial-scale=1"),
+    (property: "og:title", content: title),
+    (property: "og:description", content: description),
+    (itemprop: "name", content: title),
+  )
+  if og-type != none {
+    ((property: "og:type", content: og-type), ..base-attrs)
+  } else {
+    base-attrs
+  }
+}
 
 #let _main(
   page-title: none,
@@ -65,15 +71,12 @@
   meta: none,
   body,
 ) = [
-  #let meta = if meta == none {
-    _html_meta(page-title)
-  } else {
-    meta
-  }
-  #html.html[
+  #html.elem("html", attrs: (prefix: "og: http://ogp.me/ns#"))[
     #html.head[
-      #for meta-elem in meta {
-        html.elem("meta", attrs: meta-elem)
+      #if meta != none {
+        for meta-elem in meta {
+          html.elem("meta", attrs: meta-elem)
+        }
       }
       #html.elem("title", page-title)
       // Typst currently can't emit an empty style tag.
@@ -139,7 +142,7 @@
   #show: _main.with(
     page-title: post-title + " - " + blog-title,
     blog-title: blog-title,
-    meta: ((name: "og:type", content: "article"), .._html_meta(post-title)),
+    meta: _html_meta(post-title, tagline, og-type: "article"),
     tagline: tagline,
   )
 
@@ -160,6 +163,7 @@
   #show: _main.with(
     page-title: blog-title,
     blog-title: blog-title,
+    meta: _html_meta(blog-title, tagline),
     tagline: tagline,
   )
 
