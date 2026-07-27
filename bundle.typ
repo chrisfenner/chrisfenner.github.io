@@ -30,3 +30,8 @@
   "feed.xml",
   read("feed.xml"),
 )
+
+#asset(
+  "og-image.png",
+  read("og-image.png", encoding: none),
+)

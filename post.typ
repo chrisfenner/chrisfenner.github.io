@@ -55,6 +55,7 @@
     (name: "viewport", content: "width=device-width, initial-scale=1"),
     (property: "og:title", content: title),
     (property: "og:description", content: description),
+    (property: "og:image", content: "https://dlp.rip/og-image.png"),
     (itemprop: "name", content: title),
   )
   if og-type != none {
