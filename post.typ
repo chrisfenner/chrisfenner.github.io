@@ -53,9 +53,11 @@
   let base-attrs = (
     (charset: "utf-8"),
     (name: "viewport", content: "width=device-width, initial-scale=1"),
-    (property: "og:title", content: title),
-    (property: "og:description", content: description),
-    (property: "og:image", content: "https://dlp.rip/og-image.png"),
+    // Deliberate stylistic choice: lead with the description/tagline
+    // Rationale: Some apps only display og:title. Put the spicy stuff there.
+    (property: "og:title", content: description),
+    (property: "og:description", content: title),
+    (property: "og:image", content: "/og-image.png"),
     (itemprop: "name", content: title),
   )
   if og-type != none {
