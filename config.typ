@@ -17,12 +17,14 @@
   let post_path = "posts/" + this_post.path
   let post_permalink = this_post.permalink
   let post_tagline = this_post.at("tagline", default: "")
+  let post_image = this_post.at("preview", default: none)
 
   let show-post = post.with(
     post-title: this_post.at("title", default: none),
     post-date: this_post.at("date", default: none),
     blog-title: blog-title,
     tagline: post_tagline,
+    preview-image: post_image,
   )
 
   let post_content = {
@@ -38,6 +40,7 @@
     tagline: this_post.tagline,
     date: this_post.date,
     content: post_content,
+    post-image: post_image,
   ))
 }
 

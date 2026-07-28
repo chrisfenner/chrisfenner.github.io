@@ -49,22 +49,25 @@
   html.elem("aside", datetime.display(date-format))
 }
 
-#let _html_meta(title, description, og-type: none) = {
-  let base-attrs = (
+#let _html_meta(title, description, og-type: none, preview-image: none) = {
+  let attrs = (
     (charset: "utf-8"),
     (name: "viewport", content: "width=device-width, initial-scale=1"),
     // Deliberate stylistic choice: lead with the description/tagline
     // Rationale: Some apps only display og:title. Put the spicy stuff there.
     (property: "og:title", content: description),
     (property: "og:description", content: title),
-    (property: "og:image", content: "/og-image.png"),
     (itemprop: "name", content: title),
   )
   if og-type != none {
-    ((property: "og:type", content: og-type), ..base-attrs)
-  } else {
-    base-attrs
+    attrs = ((property: "og:type", content: og-type), ..attrs)
   }
+  if preview-image != none {
+    attrs = ((property: "og:image", content: preview-image), ..attrs)
+  } else {
+    attrs = ((property: "og:image", content: "/og-image.png"), ..attrs)
+  }
+  attrs
 }
 
 #let _main(
@@ -110,6 +113,7 @@
   post-date: none,
   blog-title: none,
   tagline: none,
+  preview-image: none,
   body,
 ) = context [
   #set quote(block: true)
@@ -146,7 +150,7 @@
   #show: _main.with(
     page-title: post-title + " - " + blog-title,
     blog-title: blog-title,
-    meta: _html_meta(post-title, tagline, og-type: "article"),
+    meta: _html_meta(post-title, tagline, og-type: "article", preview-image: preview-image),
     tagline: tagline,
   )
 

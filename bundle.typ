@@ -13,6 +13,14 @@
   // Hosting the document at just `post.permalink` results in the browser
   // offering to download the page instead of just display it.
   #document(post.permalink + "/index.html", post.content, format: "html") #label(post.permalink)
+
+  // If the config specifies a preview image, add that as an asset.
+  #if post.post-image != none {
+    asset(
+      post.post-image,
+      read(post.post-image, encoding: none),
+    )
+  }
 ]
 
 #document("index.html", title: blog-title, index(
