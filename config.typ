@@ -3,7 +3,7 @@
 #let config = toml("config.toml")
 
 #let blog-title = config.title
-#let tagline = config.at("tagline", default: "")
+#let page-tagline = config.at("tagline", default: "")
 
 #let unsorted-posts = ()
 
@@ -23,7 +23,8 @@
     post-title: this_post.at("title", default: none),
     post-date: this_post.at("date", default: none),
     blog-title: blog-title,
-    tagline: post_tagline,
+    page-tagline: page-tagline,
+    post-tagline: post_tagline,
     preview-image: post_image,
   )
 

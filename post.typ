@@ -73,7 +73,7 @@
 #let _main(
   page-title: none,
   blog-title: none,
-  tagline: none,
+  page-tagline: none,
   meta: none,
   body,
 ) = [
@@ -101,7 +101,7 @@
         )
         #div("content", body)
         #footer(
-          tagline: tagline,
+          tagline: page-tagline,
         )
       ]
     ]
@@ -112,7 +112,8 @@
   post-title: none,
   post-date: none,
   blog-title: none,
-  tagline: none,
+  page-tagline: none,
+  post-tagline: none,
   preview-image: none,
   body,
 ) = context [
@@ -150,8 +151,8 @@
   #show: _main.with(
     page-title: post-title + " - " + blog-title,
     blog-title: blog-title,
-    meta: _html_meta(post-title, tagline, og-type: "article", preview-image: preview-image),
-    tagline: tagline,
+    meta: _html_meta(post-title, post-tagline, og-type: "article", preview-image: preview-image),
+    page-tagline: page-tagline,
   )
 
   #let post-title = if post-title != none { post-title } else { body.at("title", default: none) }
@@ -172,7 +173,7 @@
     page-title: blog-title,
     blog-title: blog-title,
     meta: _html_meta(blog-title, tagline),
-    tagline: tagline,
+    page-tagline: tagline,
   )
 
   #title[Posts]

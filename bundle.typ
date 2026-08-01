@@ -6,7 +6,7 @@
 //
 // To compile the static site, run `typst compile --features html,bundle --format bundle bundle.typ`
 
-#import "config.typ": blog-title, posts, tagline
+#import "config.typ": blog-title, page-tagline, posts
 #import "post.typ": index
 
 #for post in posts [
@@ -26,7 +26,7 @@
 #document("index.html", title: blog-title, index(
   posts: posts,
   blog-title: blog-title,
-  tagline: tagline,
+  tagline: page-tagline,
 )) <index>
 
 #asset(
