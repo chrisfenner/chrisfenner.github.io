@@ -7,13 +7,15 @@ path = "2021-10-18-tpm-carte-blanche.typ"
 title = "TPM Carte Blanche"
 tagline = "The true TCB of self-measured BIOS"
 permalink = "/tpm-carte-blanche"
-date = 2021-10-19
+preview = "/images/2021-10-18-og.png"
+date = 2021-10-18
 
 [[posts]]
 path = "2021-10-25-tcb-attestation.typ"
 title = "TPM Carte Blanche-resistant Boot Attestation"
 tagline = "Some tips for verifiers"
 permalink = "/tcb-attestation"
+preview = "/images/2021-10-25-og.png"
 date = 2021-10-25
 
 [[posts]]
@@ -21,6 +23,7 @@ path = "2023-10-01-brick.typ"
 title = "The Brick Test"
 tagline = "Defining success carefully"
 permalink = "/brick"
+preview = "/images/2023-10-01-og.png"
 date = 2023-10-01
 
 [[posts]]
@@ -28,6 +31,7 @@ path = "2024-02-07-tpm-genie.typ"
 title = "TPM Genie"
 tagline = "BitLocker is Designed to Have This Problem"
 permalink = "/tpm-genie"
+preview = "/images/2024-02-07-og.png"
 date = 2024-02-07
 
 [[posts]]
@@ -35,6 +39,7 @@ path = "2024-03-18-attestable-tpm.typ"
 title = "Attestable TPMs"
 tagline = "Attesting to the TPM's Firmware"
 permalink = "/attesting-tpm-firmware"
+preview = "/images/2024-03-18-og.png"
 date = 2024-03-18
 
 [[posts]]
@@ -42,6 +47,7 @@ path = "2026-01-03-decorative-cryptography.typ"
 title = "Decorative Cryptography"
 tagline = "Some Thoughts on Decorative Cryptography"
 permalink = "/decorative-cryptography"
+preview = "/images/2026-01-03-og.png"
 date = 2026-01-03
 
 [[posts]]
@@ -49,6 +55,7 @@ path = "2026-07-20-everyday-cryptography.typ"
 title = "The Design of Everyday Cryptography"
 tagline = "Cryptography Should Be Hard to Use Improperly"
 permalink = "/everyday-cryptography"
+preview = "/images/2026-07-20-og.png"
 date = 2026-07-20
 
 [[posts]]
